@@ -1,0 +1,21 @@
+RewriteEngine on
+ErrorDocument 404 /index.php?route=404
+RewriteRule sitemap.html$ index.php?route=maps [L]
+#RewriteRule sitemap.xml$ index.php?route=maps&type=xml [L]
+RewriteRule gensitemap.xml$ index.php?route=maps&type=xml [L]
+RewriteRule sitemap_(\d+).html$ index.php?route=maps&page=$1 [L]
+
+RewriteRule (\d+)/(\d+)$ index.php?route=list&tag=$1&page=$2 [L]
+RewriteRule (\d+)/(\d+)/$ index.php?route=list&tag=$1&page=$2 [L]
+
+RewriteRule ([a-zA-Z\d]+)_(\d+)$ index.php?route=list&key=$1&tag=$2 [L]
+RewriteRule ([a-zA-Z\d]+)_(\d+)/$ index.php?route=list&key=$1&tag=$2 [L]
+
+RewriteRule (\d+)$ index.php?route=read&id=$1 [L]
+RewriteRule (\d+)/$ index.php?route=read&id=$1 [L]
+RewriteRule ([a-zA-Z\d]+)_(\d+).html$ index.php?route=read&id=$2 [L]
+RewriteRule ([a-zA-Z\d]+)_(\d+).shtml$ index.php?route=read&id=$2 [L]
+
+RewriteRule pc.php$ index.php?custom=pc [L]
+RewriteRule template/(\d)/(.*)$ Moban/$1/$2 [L]
+RewriteRule robots.txt$ index.php?route=robots [L]
