@@ -679,8 +679,10 @@ class site_read extends site_seo
 			$next = 0;
 			$last = $max;
 		}
-		$last = '<a href="' . weburl($this->site->host, 'read', $last) . '"  target="_blank">' . $keys[$last] . '</a>';
-		$next = '<a href="' . weburl($this->site->host, 'read', $next) . '"  target="_blank">' . $keys[$next] . '</a>';
+		$last_url =  'http://' . $this->site->host . '/' . py($keys[$last], 1) . '_' . $last . '.html';
+		$last = '<a href="' . $last_url . '"  target="_blank">' . $keys[$last] . '</a>';
+		$next_url =  'http://' . $this->site->host . '/' . py($keys[$next], 1) . '_' . $next . '.html';	
+		$next = '<a href="' . $next_url . '"  target="_blank">' . $keys[$next] . '</a>';
 		$code = str_replace('{流量侠_上一条}', $last, $code);
 		$code = str_replace('{流量侠_下一条}', $next, $code);
 	}
