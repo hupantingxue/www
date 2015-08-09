@@ -1954,8 +1954,28 @@ class SiteCore
 
 	function call_404()
 	{
+		/*
 		$class = new site_404($this);
 		$class->load();
 		exit;
+		*/				
+		 $file = T_PATH .'/' . $this->site->host . '404.html';
+     $data = cache_read($file);
+		 if (!$data) {			
+			$html = '';
+			
+			$html .= '<!DOCTYPE HTML><html>	<head><title>' . $this->site->title . '</title>' ;
+			$html .= '<link href="/Moban/style.css" rel="stylesheet" type="text/css"  media="all" />
+	</head>	<body>		<div class="wrap">				<div class="header">					<div class="logo">						<h1><a href="#">Ohh</a></h1>					</div>				</div>
+			<div class="content">
+				<img src="/Moban/Images/error-img.png" title="error" />
+				<p><span><label>O</label>hh.....</span>您请求的页面不存在</p>';
+			$html .= '<a href="/">返回首页</a>   			</div></div></body></html>';
+			$data = $html;
+			cache_writestr($file, $html);
+		 }
+		 
+		 echo $data;
+		 exit;
 	}
 }

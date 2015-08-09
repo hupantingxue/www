@@ -1,5 +1,6 @@
 RewriteEngine on
-ErrorDocument 404 /index.php?route=404
+ErrorDocument 404 /404.html
+
 RewriteRule sitemap.html$ index.php?route=maps [L]
 #RewriteRule sitemap.xml$ index.php?route=maps&type=xml [L]
 RewriteRule gensitemap.xml$ index.php?route=maps&type=xml [L]
