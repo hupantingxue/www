@@ -762,6 +762,7 @@ class site_read extends site_seo
 		$webs = $this->site->getSiteWord();
 		$webs['pysj'] = check_num($webs['pysj']);
 		$keys = array('' . $webs['link'][0] . '', '' . $webs['link'][1] . '', '' . $webs['link'][2] . '', '' . $webs['link'][3] . '',);
+		// echo "zzzzzzzzzzzzzzzzzzzzzzzzzzzz " . weburl($urls, 'list', 0, $webs['pysj'][0]);
 		$host = array('' . weburl($urls, 'list', 0, $webs['pysj'][0]) . '', '' . weburl($urls, 'list', 1, $webs['pysj'][1]) . '', '' . weburl($urls, 'list', 2, $webs['pysj'][2]) . '', '' . weburl($urls, 'list', 3, $webs['pysj'][3]) . '',);
 		return '<a href="' . $host[$page] . '" target="_blank">' . $keys[$page] . '</a>';
 	}
@@ -1352,7 +1353,8 @@ class site_index extends site_seos
 	{
 		$keys = $this->site->getSiteKeys($this->site->host);
 		$i = mt_rand(0, count($keys) - 1);
-		$url = weburl($this->site->host, 'read', $i);
+		// $url = weburl($this->site->host, 'read', $i);
+		$url = 'http://' . $this->site->host . '/' . py($key[$i], 1) . "_" .$i . ".html";
 		return '' . $url . '';
 	}
 
