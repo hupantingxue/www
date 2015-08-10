@@ -871,10 +871,12 @@ class site_read extends site_seo
 		if (mt_rand(0, 10) <= 1) {
 			return '<a href="' . $urls[$page] . '" target="_blank">' . $list[$page] . '</a>';
 		}
+		/*
 		if (mt_rand(0, 10) <= 3) {
 			$keys = $this->site->title;
 			return '<a href="http://' . $this->site->host . '/" target="_blank">' . $keys . '</a>';
 		}
+		*/
 		return '<a href="' . $url . '" target="_blank">' . $keys[$i] . '</a>';
 	}
 
@@ -885,9 +887,11 @@ class site_read extends site_seo
 		$title = $sites[$host];
 		$webs = $this->site->getSiteWord();
 		$word = $webs['link'][0];
+		/*
 		if (mt_rand(0, 10) <= 1) {
 			return '<a href="http://' . $this->site->host . '/" target="_blank">' . $word . '</a>';
 		}
+		*/
 		if (mt_rand(0, 10) <= 3) {
 			return '<a href="http://' . $host . '/" target="_blank">' . $title . '</a>';
 		}
