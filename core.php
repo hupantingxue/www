@@ -383,7 +383,7 @@ class site_list extends site_seo
 
 		$code = preg_replace_callback('/{流量侠_当前网址}/', array($this, 'getRandomUrl'), $code);			
 		$ca_title = $this->getRandomTitle();
-		$code = str_replace('{流量侠_当前标题}', $ca_title, $code);
+		$code = str_replace('{流量侠_当前标题}', $this->title, $code);
 	}	
 
 	function parse_moban(&$code)   //site_list
@@ -1379,8 +1379,9 @@ class site_index extends site_seos
 
 	private function getRandomList()
 	{
-		$keys = $this->site->getSiteKeys($this->site->host);
-		$i = mt_rand(0, count($keys) - 1);
+		$keys = $this->site->getSiteKeys($this->site->host);		
+		// echo "count keys: " . count($keys);
+		$i = mt_rand(0, count($keys) - 1);		
 		$v = $keys[$i];
 		if (10 >= mb_strlen($v, 'GBK')) {				
 			$j = mt_rand(0, count($keys) - 1);				
@@ -1389,7 +1390,7 @@ class site_index extends site_seos
 		else if (16 < mb_strlen($v, 'GBK')) {
 			$v = mb_substr($v, 0, 16, 'GBK');
 		}
-		//$url = weburl($this->site->host, 'read', $i);
+		// $url = weburl($this->site->host, 'read', $i);
 		$url = $url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . $i . '.html';
 		return '<a href="' . $url . '" target="_blank">' . $v . '</a>';
 	}
@@ -1749,17 +1750,18 @@ class SiteCore
 				exit;
 			}
 			$keyword = array_unique($keyword);
-			$keyword = array_filter($keyword);
+			$keyword = array_filter($keyword);			
 			$keys = array_search($this->title, $keyword);
 			if ($keys !== false) array_splice($keyword, $keys, 1);
-			shuffle($keyword);
+			// shuffle($keyword);
 			$max = count($keyword);
 			if ($max < $_SERVER['cfg_keys_num']) {
 				$_SERVER['cfg_keys_num'] = $max;
 			}
 			for ($i = 0, $max -= 1; $i < $_SERVER['cfg_keys_num']; $i++) {
 				do {
-					$___ = mt_rand(0, $max);
+					// $___ = mt_rand(0, $max);
+					$___ = $i;
 					if (!isset($keyword[$___])) {
 						continue;
 					}
