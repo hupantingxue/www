@@ -1308,6 +1308,17 @@ class site_index extends site_seos
 		$listwebs = $this->site->getListWord();
 		$listlink = $listwebs['link'];
 		$listpysj = $listwebs['pysj'];
+		
+		if (strpos($code, '流量侠_首页导航栏目')) {
+			$arrlength=count($link);
+			$sss = '';
+			for($ii=0;$ii<$arrlength;$ii++) {
+				$sss .= '<li><a href="' . weburl($urls, 'list', $ii, $pysj[$ii]) . '" target="_blank">' . $link[$ii] . '</a></li>';
+			}
+			
+			$code = str_replace('{流量侠_首页导航栏目}', $sss, $code);
+		}
+		
 		if (strpos($code, '流量侠_栏目标题')) {
 			$code = str_replace('{流量侠_栏目标题1}', $link[0], $code);
 			$code = str_replace('{流量侠_栏目标题2}', $link[1], $code);

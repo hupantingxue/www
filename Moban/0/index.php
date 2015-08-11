@@ -40,11 +40,8 @@ defined('T_VERSION') || die();
 	</div>
 	<div id="lm">
 		<fieldset>
-			<ul>
-				<li><a href="{流量侠_栏目网址1}" target="_blank">{流量侠_栏目标题1}</a></li>
-				<li><a href="{流量侠_栏目网址2}" target="_blank">{流量侠_栏目标题2}</a></li>
-				<li><a href="{流量侠_栏目网址3}" target="_blank">{流量侠_栏目标题3}</a></li>
-				<li><a href="{流量侠_栏目网址4}" target="_blank">{流量侠_栏目标题4}</a></li>
+			<ul>				
+				{流量侠_首页导航栏目}
 			</ul>
 		</fieldset>
 	</div>
