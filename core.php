@@ -383,7 +383,8 @@ class site_list extends site_seo
 
 		$code = preg_replace_callback('/{流量侠_当前网址}/', array($this, 'getRandomUrl'), $code);			
 		$ca_title = $this->getRandomTitle();
-		$code = str_replace('{流量侠_当前标题}', $this->site->title, $code);
+		// $code = str_replace('{流量侠_当前标题}', $this->title, $code);
+		$code = str_replace('{流量侠_当前标题}', $ca_title, $code);
 	}	
 
 	function parse_moban(&$code)   //site_list
@@ -1931,7 +1932,20 @@ class SiteCore
 			$sites = array();
 			foreach ($host as $_) {
 				@mkdir(T_PATH . 'cache/' . getdirname($_) . '/');
-				$sites[$_] = array_shift($sitetitle);
+				// $sites[$_] = array_shift($sitetitle);
+				$sss = array_shift($sitetitle);
+				$ssaa = explode('|', $sss);
+				$tttt = '';
+				foreach ($ssaa as $i => $v) {
+					if ($v) {
+						 if ($tttt) {
+					      $tttt .= '_' . $v;
+					   } else {
+					   	  $tttt .= $v;
+					   }
+					}
+				}
+				$sites[$_] =  $tttt;
 			}
 			cache_write($file, $sites);
 		}
