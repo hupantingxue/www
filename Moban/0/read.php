@@ -5,9 +5,9 @@ defined('T_VERSION') || die();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-		<title>{流量侠_当前标题}_{流量侠_当前栏目}_{流量侠_网站标题}</title>
-		<meta name="keywords" content="{流量侠_当前标题},{流量侠_网站标题}" />
-		<meta name="description" content="{流量侠_当前标题}为你提供海量最新的{流量侠_当前栏目}、{流量侠_网站标题}的相关新闻资讯,本站是你查找{流量侠_当前标题}的最佳选择！" />
+		<title>{流量侠_当前标题}_{流量侠_当前栏目}_{流量侠_网站随机标题}</title>
+		<meta name="keywords" content="{流量侠_当前标题},{流量侠_网站随机标题}" />
+		<meta name="description" content="{流量侠_当前标题}为你提供海量最新的{流量侠_当前栏目}、{流量侠_网站随机标题}的相关新闻资讯,本站是你查找{流量侠_当前标题}的最佳选择！" />
 		<meta name="robots" content="noarchive">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<link rel="stylesheet" type="text/css" href="/Moban/style_0.css" />
@@ -48,7 +48,7 @@ defined('T_VERSION') || die();
 			</ul>
 		</fieldset>
 	</div>
-	<div id="Wz">您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a> >> {流量侠_网站栏目} >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></div>
+	<div id="Wz">您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a> >> {流量侠_网站栏目} >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></div>
 	<div id="Xw">
 		<fieldset>
 		<legend><h1>{流量侠_当前标题}</h1></legend>

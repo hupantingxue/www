@@ -385,6 +385,7 @@ class site_list extends site_seo
 		$ca_title = $this->getRandomTitle();
 		// $code = str_replace('{流量侠_当前标题}', $this->title, $code);
 		$code = str_replace('{流量侠_当前标题}', $ca_title, $code);
+		$code = str_replace('{流量侠_网站随机标题}', $this->getMyRandTitle(), $code);		
 	}	
 
 	function parse_moban(&$code)   //site_list
@@ -626,7 +627,16 @@ class site_list extends site_seo
 		$arr['string2'] = '' . weburl($this->site->host, 'pags', $this->site->tag, $webs['pysj'][$this->site->tag], $thepage) . '' . PHP_EOL;
 		return $arr;
 	}
-
+	
+		
+	private function getMyRandTitle()
+	{
+		$titles = $this->site->title;
+		$ssaa = explode('_', $titles);
+		$title = $ssaa[array_rand($ssaa)];		
+		return $title;
+	}
+	
 	private function getRandomWord()
 	{
 		$webs = $this->site->getSiteWord();
@@ -697,6 +707,7 @@ class site_read extends site_seo
 		$code = str_replace('{流量侠_发布时间}', date('Y-m-d H:i:s'), $code);
 		$code = str_replace('{流量侠_浏览次数}', rand(100000, 999999), $code);
 		$code = str_replace('{流量侠_网站标题}', $this->site->title, $code);		
+		$code = str_replace('{流量侠_网站随机标题}', $this->getMyRandTitle(), $code);		
 		$code = str_replace('{流量侠_网站域名}', 'http://' . $this->site->host . '/', $code);
 		$this->title = $keys[$this->site->id];
 		$url = weburl($this->site->host, 'read', $this->site->id);
@@ -744,7 +755,15 @@ class site_read extends site_seo
 		$code = preg_replace_callback('/{流量侠_网站图文}/', array($this, 'getRandomPic1'), $code);
 		$code = preg_replace_callback('/{流量侠_站内轮链}/', array($this, 'getRandomLin1'), $code);
 		$code = preg_replace_callback('/{流量侠_站外轮链}/', array($this, 'getRandomLin2'), $code);
-	}	
+	}		
+		
+	private function getMyRandTitle()
+	{
+		$titles = $this->site->title;
+		$ssaa = explode('_', $titles);
+		$title = $ssaa[array_rand($ssaa)];		
+		return $title;
+	}
 
 	private function getRandomPdao()
 	{
@@ -1353,8 +1372,7 @@ class site_index extends site_seos
 		$code = preg_replace_callback('/{流量侠_网站内页}/', array($this, 'getRandomList'), $code);
 		$code = preg_replace_callback('/{流量侠_网站图片}/', array($this, 'getRandomPic0'), $code);
 		$code = preg_replace_callback('/{流量侠_网站图文}/', array($this, 'getRandomPic1'), $code);
-	}
-	
+	}	
 	
 	private function getMyRandTitle()
 	{
