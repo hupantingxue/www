@@ -633,7 +633,8 @@ class site_list extends site_seo
 	{
 		$titles = $this->site->title;
 		$ssaa = explode('_', $titles);
-		$title = $ssaa[array_rand($ssaa)];		
+		$i = mt_rand(0, count($ssaa) - 1);
+		$title = $ssaa[$i];		
 		return $title;
 	}
 	
@@ -760,8 +761,9 @@ class site_read extends site_seo
 	private function getMyRandTitle()
 	{
 		$titles = $this->site->title;
-		$ssaa = explode('_', $titles);
-		$title = $ssaa[array_rand($ssaa)];		
+		$ssaa = explode('_', $titles);		
+		$i = mt_rand(0, count($ssaa) - 1);
+		$title = $ssaa[$i];		
 		return $title;
 	}
 
@@ -996,6 +998,7 @@ class site_maps extends site_seo
 		$code = str_replace('{流量侠_发布时间}', date('Y-m-d H:i:s'), $code);
 		$code = str_replace('{流量侠_浏览次数}', rand(100000, 999999), $code);
 		$code = str_replace('{流量侠_网站标题}', $this->site->title, $code);
+		$code = str_replace('{流量侠_网站随机标题}', $this->getMyRandTitle(), $code);		
 		$code = str_replace('{流量侠_网站域名}', 'http://' . $this->site->host . '/', $code);
 		$urls = $this->site->host;
 		$webs = $this->site->getSiteWord();
@@ -1162,6 +1165,15 @@ class site_maps extends site_seo
 		$arr['string1'] = '第' . $thepage . '页';
 		$arr['string2'] = '' . weburl($this->site->host, 'maps', $thepage) . '' . PHP_EOL;
 		return $arr;
+	}
+	
+	private function getMyRandTitle()
+	{
+		$titles = $this->site->title;
+		$ssaa = explode('_', $titles);		
+		$i = mt_rand(0, count($ssaa) - 1);
+		$title = $ssaa[$i];			
+		return $title;
 	}
 
 	private function getRandomWord()
@@ -1377,8 +1389,9 @@ class site_index extends site_seos
 	private function getMyRandTitle()
 	{
 		$titles = $this->site->title;
-		$ssaa = explode('_', $titles);
-		$title = $ssaa[array_rand($ssaa)];		
+		$ssaa = explode('_', $titles);		
+		$i = mt_rand(0, count($ssaa) - 1);
+		$title = $ssaa[$i];			
 		return $title;
 	}
 

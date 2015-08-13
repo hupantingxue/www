@@ -69,7 +69,7 @@ defined('T_VERSION') || die();
 		</ul>
 	</div>
 	<div id="Db">
-		BY {流量侠_网站域名} <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a></strong> <strong><a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></strong> 版权所有 <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a>
+		BY {流量侠_网站域名} <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a></strong> <strong><a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></strong> 版权所有 <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a>
 	</div>
 	<!-- Baidu Button BEGIN -->
 		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=7&amp;pos=right&amp;uid=6713514" ></script>

@@ -6,7 +6,7 @@ defined('T_VERSION') || die();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>网站地图({流量侠_地图页数})_{流量侠_网站标题}</title>
+        <title>网站地图({流量侠_地图页数})_{流量侠_网站随机标题}</title>
 		<meta name="robots" content="noarchive">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<link rel="stylesheet" type="text/css" href="/Moban/style_0.css" />
@@ -14,7 +14,7 @@ defined('T_VERSION') || die();
     </head>
 	<body>
 	<div id="Tb">
-		<h1><a href="{流量侠_网站域名}" title="{流量侠_网站标题}" target="_blank">{流量侠_网站标题}</a></h1>
+		<h1><a href="{流量侠_网站域名}" title="{流量侠_网站标题}" target="_blank">{流量侠_网站随机标题}</a></h1>
 	</div>
 	<div id="lm">
 		<fieldset>
@@ -27,7 +27,7 @@ defined('T_VERSION') || die();
 		</fieldset>
 	</div>
 	<div id="maps">
-		<h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a> >> <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a> >> <a href="{流量侠_地图网址}" target="_blank">{流量侠_地图页数}</a> >> 地图内容</h2>
+		<h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a> >> <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a> >> <a href="{流量侠_地图网址}" target="_blank">{流量侠_地图页数}</a> >> 地图内容</h2>
 		<ul>
 			{流量侠_地图列表}
 		<div id="page">
@@ -36,7 +36,7 @@ defined('T_VERSION') || die();
 		</ul>
 	</div>
 	<div id="Db">
-		BY {流量侠_网站域名} <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a></strong> <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站副词}</a></strong> 版权所有 <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a>
+		BY {流量侠_网站域名} <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a></strong> <strong><a href="{流量侠_网站域名}" target="_blank">{流量侠_网站副词}</a></strong> 版权所有 <a href="{流量侠_网站域名}sitemap.html" target="_blank">网站地图</a>
 	</div>
 	<!-- Baidu Button BEGIN -->
 		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=7&amp;pos=right&amp;uid=6713514" ></script>
