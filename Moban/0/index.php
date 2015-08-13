@@ -7,8 +7,8 @@ defined('T_VERSION') || die();
 <html xmlns="http://www.w3.org/1999/xhtml">
 		<!--title>{流量侠_网站标题}_{流量侠_网站副词}_{流量侠_栏目标题2}</title-->
 		<title>{流量侠_网站标题}</title>
-		<meta name="keywords" content="{流量侠_网站标题},{流量侠_网站副词}" />
-		<meta name="description" content="{流量侠_网站标题}为你提供海量最新的{流量侠_栏目标题1}、{流量侠_栏目标题2}、{流量侠_栏目标题3}、{流量侠_栏目标题4}的相关新闻资讯,本站是你查找{流量侠_网站标题}的最佳选择！" />
+		<meta name="keywords" content="{流量侠_网站随机标题},{流量侠_网站副词}" />
+		<meta name="description" content="{流量侠_网站随机标题}为你提供海量最新的{流量侠_栏目标题1}、{流量侠_栏目标题2}、{流量侠_栏目标题3}、{流量侠_栏目标题4}的相关新闻资讯,本站是你查找{流量侠_网站标题}的最佳选择！" />
 		<meta name="robots" content="noarchive">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<link rel="stylesheet" type="text/css" href="/Moban/style_0.css" />
