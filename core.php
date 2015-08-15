@@ -913,10 +913,11 @@ class site_read extends site_seo
 		if (mt_rand(0, 10) <= 1) {
 			return '<a href="http://' . $this->site->host . '/" target="_blank">' . $word . '</a>';
 		}
-		*/
+		
 		if (mt_rand(0, 10) <= 3) {
 			return '<a href="http://' . $host . '/" target="_blank">' . $title . '</a>';
 		}
+		*/
 		$keys = $this->site->getSiteKeys($host);
 		$j = mt_rand(0, count($keys) - 1);
 		$url = weburl($host, 'read', $j);
@@ -1335,6 +1336,7 @@ class site_index extends site_seos
 		$code = str_replace('{流量侠_网站标题}', $this->site->title, $code);
 		$code = str_replace('{流量侠_网站随机标题}', $this->getMyRandTitle(), $code);		
 		$code = str_replace('{流量侠_网站域名}', 'http://' . $this->site->host . '/', $code);
+		$code = str_replace('{流量侠_网站主机}', $this->site->host , $code);
 		$urls = $this->site->host;
 		$webs = $this->site->getSiteWord();
 		$webs['pysj'] = check_num($webs['pysj']);
