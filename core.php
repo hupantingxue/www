@@ -940,7 +940,9 @@ class site_maps extends site_seo
 
 	function parse_xml()
 	{
-		 $file = T_PATH .'/' . $this->site->host . 'sitemap.xml';
+		 // $file = T_PATH .'/' . $this->site->host . 'sitemap.xml';
+		 @mkdir(T_PATH . 'sitemap/' . $this->site->host . '/');
+		 $file = T_PATH .'sitemap/' . $this->site->host . '/sitemap.xml';
 		 echo "sitemap file: " . $file;
      $data = cache_read($file);
 		 if (!$data) {
