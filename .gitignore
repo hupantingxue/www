@@ -1,6 +1,8 @@
 cache/
 Moban/Pics/*
 kws/
+Text/*
+Moban/Text/*
 sitemap/
 *.bak
 *.swp
