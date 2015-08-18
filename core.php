@@ -411,12 +411,15 @@ class site_list extends site_seo
 		*/
 		$url = weburl($this->site->host, 'list', $this->site->tag, $webs['pysj'][$this->site->tag]);
 		$title = $webs['link'][$this->site->tag];
-	
-	  $code = str_replace('{流量侠_上级标题}', $title, $code);
+		  
 	  $keys = $this->site->getSiteKeys($this->site->host);	
 	  $j = mt_rand(0, count($keys) - 1);
 		$title = $keys[$j];
-		$cur_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_1/';
+		$code = str_replace('{流量侠_上级标题}', $title, $code);
+		$cur_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_1/';		
+		$ii = mt_rand(0, 5);
+		$last_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_' . $ii;
+		$code = str_replace('{流量侠_上级网址}', $last_url, $code);
 		
 		$link = $webs['link'];
 		$pysj = $webs['pysj'];

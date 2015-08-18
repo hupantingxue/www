@@ -54,7 +54,7 @@ defined('T_VERSION') || die();
 	</div>
 	<div id="menu">
 	<!--h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a> >> <a href="{流量侠_栏目网址}" target="_blank">{流量侠_当前标题}{流量侠_栏目页数}</a> >> 列表内容</h2-->
-	<h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_上级标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></h2>
+	<h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a> >> <a href="{流量侠_上级网址}" target="_blank">{流量侠_上级标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></h2>
 	<ul>
 		{流量侠_栏目列表}
 		<div id="page">
