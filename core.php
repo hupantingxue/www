@@ -506,7 +506,7 @@ class site_list extends site_seo
 		$time = substr($time, -2);
 		foreach ($keys as $i => $v) {
 			// $url = weburl($this->site->host, 'read', $i);			
-			$url = $url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . $i . '.html';
+			$url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . ($i+1) . '.html';
 			
 			if (10 >= mb_strlen($v, 'GBK')) {				
 				$jj = mt_rand(0, count($keys) - 1);				
