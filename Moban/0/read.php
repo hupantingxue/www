@@ -63,10 +63,6 @@ defined('T_VERSION') || die();
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{流量侠_文章内容}{流量侠_文章内容}{流量侠_当前标题}{流量侠_文章内容}{流量侠_站外轮链}{流量侠_文章内容}
 				</p>
-			
-			<p>
-				<embed  src="http://flv1.gmw.cn/gmw/videoroot/2015-08-05/1438759588912.mp4?id=0" type="video/mp4" data-res="Full" />
-      </p>
 				<p><br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{流量侠_文章内容}{流量侠_文章内容}<strong>{流量侠_当前标题}</strong>{流量侠_文章内容}{流量侠_文章内容}
 				</p>
