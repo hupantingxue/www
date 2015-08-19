@@ -417,7 +417,7 @@ class site_list extends site_seo
 		$title = $keys[$j];
 		$code = str_replace('{流量侠_上级标题}', $title, $code);
 		$cur_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_1/';		
-		$ii = mt_rand(0, 5);
+		$ii = mt_rand(1, 4);
 		$last_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_' . $ii;
 		$code = str_replace('{流量侠_上级网址}', $last_url, $code);
 		
@@ -861,7 +861,7 @@ class site_read extends site_seo
 			return '网站图片库为空，请检测！';
 		}
 		$images = $_SERVER['cfg_pics'][$i];
-		$j = mt_rand(0, count($keys) - 1);
+		$j = mt_rand(0, count($keys)-1);
 		$url1 = 'http://' . $this->site->host . '/';
 		$url2 = weburl($this->site->host, 'read', $j);
 		$num = sizeof(scandir("./text"));
@@ -872,11 +872,11 @@ class site_read extends site_seo
 		$wzbt = $text[$i];
 		if (mt_rand(1, 2) == 1) {
 			$title = $keys[$j];
-			$url2 = 'http://' . $this->site->host . '/' . py($title, 1) . '_' .$j . '.html';
+			$url2 = 'http://' . $this->site->host . '/' . py($title, 1) . '_' .($j+1) . '.html';
 			return '<a href="' . $url2 . '" target="_blank"><img src="' . $url1 . '' . $images . '" title="' . $wzbt . '' . $keys[$j] . '" /></a><br><a href="' . $url2 . '" target="_blank">' . $wzbt . '' . $keys[$j] . '</a>';
 		} else {
 			$title = $keys[$j];
-			$url2 = 'http://' . $this->site->host . '/' . py($title, 1) . '_' .$j . '.html';
+			$url2 = 'http://' . $this->site->host . '/' . py($title, 1) . '_' .($j+1) . '.html';
 			return '<a href="' . $url2 . '" target="_blank"><img src="' . $url1 . '' . $images . '" title="' . $keys[$j] . '' . $wzbt . '" /></a><br><a href="' . $url2 . '" target="_blank">' . $keys[$j] . '' . $wzbt . '</a>';
 		}
 	}
@@ -1060,7 +1060,7 @@ class site_maps extends site_seo
 		$list = array();
 		foreach ($keys as $i => $v) {
 			// $url = weburl($this->site->host, 'read', $i);
-			$url = 'http://' . $this->site->host . '/' . py($v, 1) . "_" . $i . ".html";
+			$url = 'http://' . $this->site->host . '/' . py($v, 1) . "_" . ($i+1) . ".html";
 			$list[] = '<li><a href="' . $url . '" target="_blank">' . $v . '</a></li>';
 		}
 		$max = $page['first'] + $a_page_nums;
@@ -1418,7 +1418,7 @@ class site_index extends site_seos
 	private function getRandomUrls()
 	{
 		$keys = $this->site->getSiteKeys($this->site->host);
-		$i = mt_rand(0, count($keys) - 1);
+		$i = mt_rand(1, count($keys));
 		// $url = weburl($this->site->host, 'read', $i);
 		$url = 'http://' . $this->site->host . '/' . py($key[$i], 1) . "_" .$i . ".html";
 		return '' . $url . '';
@@ -1459,7 +1459,7 @@ class site_index extends site_seos
 			$v = mb_substr($v, 0, 16, 'GBK');
 		}
 		// $url = weburl($this->site->host, 'read', $i);
-		$url = $url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . $i . '.html';
+		$url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . ($i+1) . '.html';
 		return '<a href="' . $url . '" target="_blank">' . $v . '</a>';
 	}
 
