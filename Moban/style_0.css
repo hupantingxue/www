@@ -9,7 +9,7 @@ img{border:0px;}
 #Tb h2 a{display:block;widht:1003;height:60px;background:url(./Images/logo.png) no-repeat;text-indent:-9999em;}
 
 #lm{background:#fff;margin-top:5px;padding:10px;}
-#lm ul li{float:left;width:200px;height:42px;line-height:42px;overflow:hidden;white-space:nowrap;text-align:center;}
+#lm ul li{float:left;width:160px;height:42px;line-height:42px;overflow:hidden;white-space:nowrap;text-align:center;}
 #lm ul li{font-weight:bold;}
 #lm ul li a{font-weight:bold;}
 #lm ul li a:hover{text-decoration:underline;}

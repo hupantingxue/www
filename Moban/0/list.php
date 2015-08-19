@@ -5,8 +5,7 @@ defined('T_VERSION') || die();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <!--title>{流量侠_当前标题}({流量侠_栏目页数})_{流量侠_网站标题}</title-->
-    <title>{流量侠_网站随机标题}</title>
+    <title>{流量侠_当前标题}_{流量侠_当前栏目}_{流量侠_网站随机标题}</title>
 		<meta name="robots" content="noarchive">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<link rel="stylesheet" type="text/css" href="/Moban/style_0.css" />
@@ -35,16 +34,11 @@ defined('T_VERSION') || die();
 	-->
 	<body>
 	<div id="Tb">
-		<h1><a href="{流量侠_网站域名}" title="{流量侠_网站标题}" target="_blank">{流量侠_网站标题}</a></h1>
+		<h1><a href="{流量侠_网站域名}" title="{流量侠_网站随机标题}" target="_blank">{流量侠_网站标题}</a></h1>
 	</div>
 	<div id="lm">
 		<fieldset>
 			<ul>
-				<!--li><a href="{流量侠_列表栏目网址1}" target="_blank">{流量侠_列表栏目标题1}</a></li>
-				<li><a href="{流量侠_列表栏目网址2}" target="_blank">{流量侠_列表栏目标题2}</a></li>
-				<li><a href="{流量侠_列表栏目网址3}" target="_blank">{流量侠_列表栏目标题3}</a></li>
-				<li><a href="{流量侠_列表栏目网址4}" target="_blank">{流量侠_列表栏目标题4}</a></li-->
-				
 				<li>{流量侠_列表动态标题1}</li>
 				<li>{流量侠_列表动态标题2}</li>
 				<li>{流量侠_列表动态标题3}</li>
@@ -53,7 +47,6 @@ defined('T_VERSION') || die();
 		</fieldset>
 	</div>
 	<div id="menu">
-	<!--h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a> >> <a href="{流量侠_栏目网址}" target="_blank">{流量侠_当前标题}{流量侠_栏目页数}</a> >> 列表内容</h2-->
 	<h2>&nbsp;您现在的位置：<a href="{流量侠_网站域名}" target="_blank">{流量侠_网站随机标题}</a> >> <a href="{流量侠_上级网址}" target="_blank">{流量侠_上级标题}</a> >> <a href="{流量侠_当前网址}" target="_blank">{流量侠_当前标题}</a></h2>
 	<ul>
 		{流量侠_栏目列表}
