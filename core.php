@@ -361,6 +361,8 @@ abstract class site_seo
 class site_list extends site_seo
 {
 	public $moban = 'list.php';
+	public $randtt = array();  // 动态标题数组
+	public $randurl = array();  // 动态标题url数组
 
 	function load()
 	{
@@ -376,14 +378,41 @@ class site_list extends site_seo
 		$code = str_replace('{流量侠_栏目页数}', $data['paxe'], $code);
 		$code = str_replace('{流量侠_栏目网址}', $data['pawz'], $code);
 		
-		$code = str_replace('{流量侠_列表动态标题1}', $this->getRandomList(1), $code);
-		$code = str_replace('{流量侠_列表动态标题2}', $this->getRandomList(2), $code);
-		$code = str_replace('{流量侠_列表动态标题3}', $this->getRandomList(3), $code);
-		$code = str_replace('{流量侠_列表动态标题4}', $this->getRandomList(4), $code);		
+		$randarr = $this->getRandomList(1);
+		$turl = $randarr[0];		
+		$ttt = $randarr[1];		
+		$randtt[] = $ttt;
+		$randurl[] = $turl;
+		$randarr = $this->getRandomList(2);
+		$turl = $randarr[0];		
+		$ttt = $randarr[1];	
+		$randtt[] = $ttt;
+		$randurl[] = $turl;
+		$randarr = $this->getRandomList(3);
+		$turl = $randarr[0];		
+		$ttt = $randarr[1];
+		$randtt[] = $ttt;
+		$randurl[] = $turl;		
+		$randarr = $this->getRandomList(4);	
+		$turl = $randarr[0];		
+		$ttt = $randarr[1];
+		$randtt[] = $ttt;
+		$randurl[] = $turl;
+		
+		$ss =  '<a href="' . $randurl[0] . '" target="_blank">' . $randtt[0] . '</a>';		
+		$code = str_replace('{流量侠_列表动态标题1}', $ss, $code);
+		$ss =  '<a href="' . $randurl[1] . '" target="_blank">' . $randtt[1] . '</a>';		
+		$code = str_replace('{流量侠_列表动态标题2}', $ss, $code);
+		$ss =  '<a href="' . $randurl[2] . '" target="_blank">' . $randtt[2] . '</a>';		
+		$code = str_replace('{流量侠_列表动态标题3}', $ss, $code);
+		$ss =  '<a href="' . $randurl[3] . '" target="_blank">' . $randtt[3] . '</a>';		
+		$code = str_replace('{流量侠_列表动态标题4}', $ss, $code);
 
 		$code = preg_replace_callback('/{流量侠_当前网址}/', array($this, 'getRandomUrl'), $code);			
-		$ca_title = $this->getRandomTitle();
-		// $code = str_replace('{流量侠_当前标题}', $this->title, $code);
+		// $ca_title = $this->getRandomTitle();
+		// $code = str_replace('{流量侠_当前标题}', $this->title, $code);		
+		
+		$ca_title = $randtt[mt_rand(0, 3)];
 		$code = str_replace('{流量侠_当前标题}', $ca_title, $code);
 		$code = str_replace('{流量侠_网站随机标题}', $this->getMyRandTitle(), $code);		
 	}	
@@ -413,12 +442,13 @@ class site_list extends site_seo
 		$title = $webs['link'][$this->site->tag];
 		  
 	  $keys = $this->site->getSiteKeys($this->site->host);	
-	  $j = mt_rand(0, count($keys) - 1);
-		$title = $keys[$j];
+	  $j = mt_rand(0, count($web['link']) - 1);
+		$title = $web['link'][$j];
 		$code = str_replace('{流量侠_上级标题}', $title, $code);
+		$code = str_replace('{流量侠_当前栏目}', $title, $code);		
 		$cur_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_1/';		
 		$ii = mt_rand(1, 4);
-		$last_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_' . $ii;
+		$last_url = 'http://' . $this->site->host . '/' . py($title, 1) . '_' . ($j+1);
 		$code = str_replace('{流量侠_上级网址}', $last_url, $code);
 		
 		$link = $webs['link'];
@@ -652,7 +682,8 @@ class site_list extends site_seo
 		$keys = $this->site->getSiteKeys($this->site->host);
 		$i = mt_rand(0, count($keys) - 1);
 		$url = 'http://' . $this->site->host . '/' . py($keys[$i], 1) . '_' . $type . '/';
-		return '<a href="' . $url . '" target="_blank">' . $keys[$i] . '</a>';
+		// return '<a href="' . $url . '" target="_blank">' . $keys[$i] . '</a>';		
+		return array($url, $keys[$i]);
 	}
 	
 	private function getRandomTitle()
@@ -751,7 +782,7 @@ class site_read extends site_seo
 			$code = str_replace('{流量侠_列表栏目网址3}', weburl($urls, 'list', 2, $listpysj[2]), $code);
 			$code = str_replace('{流量侠_列表栏目网址4}', weburl($urls, 'list', 3, $listpysj[3]), $code);
 		}
-		$code = preg_replace_callback('/{流量侠_当前栏目}/', array($this, 'getRandomPdao'), $code);
+		// $code = preg_replace_callback('/{流量侠_当前栏目}/', array($this, 'getRandomPdao'), $code);
 		$code = preg_replace_callback('/{流量侠_网站栏目}/', array($this, 'getRandomVaue'), $code);
 		$code = preg_replace_callback('/{流量侠_文章内容}/', array($this, 'getRandomText'), $code);
 		$code = preg_replace_callback('/{流量侠_网站内页}/', array($this, 'getRandomList'), $code);
