@@ -783,7 +783,10 @@ class site_read extends site_seo
 			$code = str_replace('{流量侠_列表栏目网址4}', weburl($urls, 'list', 3, $listpysj[3]), $code);
 		}
 		// $code = preg_replace_callback('/{流量侠_当前栏目}/', array($this, 'getRandomPdao'), $code);
-		$code = preg_replace_callback('/{流量侠_网站栏目}/', array($this, 'getRandomVaue'), $code);
+		$arr = $this->getLWRandomVaue();
+		$code = str_replace('{流量侠_网站栏目}', $arr[0], $code);
+		$code = str_replace('{流量侠_网站栏目标题}', $arr[1], $code);
+		// $code = preg_replace_callback('/{流量侠_网站栏目}/', array($this, 'getLWRandomVaue'), $code);
 		$code = preg_replace_callback('/{流量侠_文章内容}/', array($this, 'getRandomText'), $code);
 		$code = preg_replace_callback('/{流量侠_网站内页}/', array($this, 'getRandomList'), $code);
 		$code = preg_replace_callback('/{流量侠_网站图片}/', array($this, 'getRandomPic0'), $code);
@@ -821,6 +824,32 @@ class site_read extends site_seo
 		$host = array('' . weburl($urls, 'list', 0, $webs['pysj'][0]) . '', '' . weburl($urls, 'list', 1, $webs['pysj'][1]) . '', '' . weburl($urls, 'list', 2, $webs['pysj'][2]) . '', '' . weburl($urls, 'list', 3, $webs['pysj'][3]) . '',);
 		return '<a href="' . $host[$page] . '" target="_blank">' . $keys[$page] . '</a>';
 	}
+
+	private function getLWRandomVaue()
+	{ 
+		$retarr = array();
+		$page = $this->site->id % 4;
+		$urls = $this->site->host;
+		$webs = $this->site->getListWord();
+		$webs['pysj'] = check_num($webs['pysj']);
+		$keys = array('' . $webs['link'][0] . '', '' . $webs['link'][1] . '', '' . $webs['link'][2] . '', '' . $webs['link'][3] . '',);
+		$host = array('' . weburl($urls, 'list', 0, $webs['pysj'][0]) . '', '' . weburl($urls, 'list', 1, $webs['pysj'][1]) . '', '' . weburl($urls, 'list', 2, $webs['pysj'][2]) . '', '' . weburl($urls, 'list', 3, $webs['pysj'][3]) . '',);
+		$retarr[] = '<a href="' . $host[$page] . '" target="_blank">' . $keys[$page] . '</a>';
+		$retarr[] = $keys[$page];
+		return $retarr;
+	}
+	
+	private function getLWRandomTitle()
+	{
+		$page = $this->site->id % 4;
+		$urls = $this->site->host;
+		$webs = $this->site->getListWord();
+		$webs['pysj'] = check_num($webs['pysj']);
+		$keys = array('' . $webs['link'][0] . '', '' . $webs['link'][1] . '', '' . $webs['link'][2] . '', '' . $webs['link'][3] . '',);
+		$host = array('' . weburl($urls, 'list', 0, $webs['pysj'][0]) . '', '' . weburl($urls, 'list', 1, $webs['pysj'][1]) . '', '' . weburl($urls, 'list', 2, $webs['pysj'][2]) . '', '' . weburl($urls, 'list', 3, $webs['pysj'][3]) . '',);
+		return '<a href="' . $host[$page] . '" target="_blank">' . $keys[$page] . '</a>';
+	}
+
 
 	private function getRandomText()
 	{
