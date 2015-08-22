@@ -1478,7 +1478,7 @@ class site_index extends site_seos
 	private function getRandomUrls()
 	{
 		$keys = $this->site->getSiteKeys($this->site->host);
-		$i = mt_rand(1, count($keys));
+		$i = mt_rand(0, count($keys) - 1);
 		// $url = weburl($this->site->host, 'read', $i);
 		$url = 'http://' . $this->site->host . '/' . py($key[$i], 1) . "_" .$i . ".html";
 		return '' . $url . '';
@@ -1519,7 +1519,7 @@ class site_index extends site_seos
 			$v = mb_substr($v, 0, 16, 'GBK');
 		}
 		// $url = weburl($this->site->host, 'read', $i);
-		$url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . ($i+1) . '.html';
+		$url = 'http://' . $this->site->host . '/' . py($v, 1) . '_' . $i . '.html';
 		return '<a href="' . $url . '" target="_blank">' . $v . '</a>';
 	}
 
